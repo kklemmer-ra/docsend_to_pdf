@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: docsend-capturer
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run docsend_streamlit.py --server.port $PORT --server.address 0.0.0.0
